@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light dark;
+  --color-stone-50: oklch(0.985 0.001 106.423);
+  --color-stone-900: oklch(0.147 0.004 49.25);
+}
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+
+@theme {
+  --font-sans: Helvetica Neue, Helvetica, Arial, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --color-*: initial;
+  --color-surface: light-dark(var(--color-stone-50), var(--color-stone-900));
+}
+
+html {
+  background-color: var(--color-surface);
+}
